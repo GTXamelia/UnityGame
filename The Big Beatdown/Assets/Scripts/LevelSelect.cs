@@ -17,6 +17,6 @@ public class LevelSelect : MonoBehaviour {
 
 	public void Level1()
 	{
-		SceneManager.LoadScene("OtherSceneName", LoadSceneMode.Additive);
+		SceneManager.LoadScene("Level1");
 	}
 }
