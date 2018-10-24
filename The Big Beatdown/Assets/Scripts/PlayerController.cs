@@ -5,33 +5,36 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
-	private bool moving;
-	private Rigidbody2D rb2d;
+	Animator anim;
+
 
 	// Use this for initialization
 	void Start () {
-		rb2d = GetComponent<Rigidbody2D>();
+		anim = GetComponent<Animator>();
 	}
 	
-	void FixedUpdate()
+	void Update()
 	{
 
-		if (Input.GetKey("left") || Input.GetKey("right"))
+		Movement();
 		{
-
-			moving = true;
-
+			float move = Input.GetAxis("Horizontal");
+			anim.SetFloat("speed", move);
 		}
-		else { moving = false; }
 
-		if (moving)
+	}
+
+	void Movement()
+	{
+		if (Input.GetKey(KeyCode.D))
 		{
-			float moveHotizontal = Input.GetAxisRaw("Horizontal");
-			float moveVertical = Input.GetAxisRaw("Vertical");
-
-			Vector2 movement = new Vector2(moveHotizontal, moveVertical);
-
-			rb2d.AddForce(movement * speed);
-		} else { rb2d.velocity = Vector2.zero; }
+			transform.Translate(Vector2.right * speed * Time.deltaTime);
+			transform.eulerAngles = new Vector2(0, 0);
+		}
+		if (Input.GetKey(KeyCode.A))
+		{
+			transform.Translate(-Vector2.right * speed * Time.deltaTime);
+			transform.eulerAngles = new Vector2(0, 0);
+		}
 	}
 }
