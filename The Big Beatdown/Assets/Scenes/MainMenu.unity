@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 820467203}
   - component: {fileID: 820467202}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Pole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 975695021}
   - component: {fileID: 975695020}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: BillBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1723,7 +1723,7 @@ GameObject:
   - component: {fileID: 1632051519}
   - component: {fileID: 1632051518}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: 50%Off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2127,7 +2127,7 @@ GameObject:
   - component: {fileID: 2039101470}
   - component: {fileID: 2039101469}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
