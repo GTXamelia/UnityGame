@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class Settings : MonoBehaviour {
 
+	public GameObject settings;
+
 	// Use this for initialization
-	void Start () {
-		
+	void Awake()
+	{
+		Debug.Log("Awake");
+
+		settings = GameObject.Find("SettingsBubble");
+
+		settings.SetActive(false);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void SettingsMenu()
+	{
+		if (settings.active)
+		{
+			settings.SetActive(false);
+		}
+		else
+		{
+			settings.SetActive(true);
+		}
 	}
 }
