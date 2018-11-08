@@ -26,12 +26,12 @@ public class PlayerController : MonoBehaviour {
 
 	void Movement()
 	{
-		if (Input.GetKey(KeyCode.D))
+		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
 		{
 			transform.Translate(Vector2.right * speed * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, 0);
 		}
-		if (Input.GetKey(KeyCode.A))
+		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
 		{
 			transform.Translate(-Vector2.right * speed * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, 0);
