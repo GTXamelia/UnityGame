@@ -26,7 +26,15 @@ public class PlayerController : MonoBehaviour {
 
 	void Movement()
 	{
-		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+		if (Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+		{
+			GetComponent<Animator>().Play("Punch_Right");
+		}
+		else if (Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
+		{
+			GetComponent<Animator>().Play("Punch_Left");
+		}
+		else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
 		{
 			transform.Translate(Vector2.right * speed * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, 0);
