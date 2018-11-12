@@ -30,11 +30,19 @@ public class PlayerController : MonoBehaviour {
 		{
 			transform.Translate(Vector2.right * speed * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, 0);
+
+			GetComponent<Animator>().Play("Player_Right");
 		}
-		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+		else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
 		{
 			transform.Translate(-Vector2.right * speed * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, 0);
+
+			GetComponent<Animator>().Play("Player_Left");
+		}
+		else
+		{
+			GetComponent<Animator>().Play("Idle");
 		}
 	}
 }

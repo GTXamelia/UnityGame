@@ -484,7 +484,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.094349
+  orthographic size: 5.326174
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -507,11 +507,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0.014447851, y: -0, z: -0, w: 0.99989563}
-  m_LocalPosition: {x: 0.030095497, y: 0.404575, z: -9.598872}
-  m_LocalScale: {x: 4.493253, y: 1.9389791, z: 1.0343429}
+  m_LocalPosition: {x: -0.004, y: 0.893, z: -9.56}
+  m_LocalScale: {x: 4.902139, y: 2.1177049, z: 1.1296837}
   m_Children: []
   m_Father: {fileID: 2097420422}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &805971967
 GameObject:
@@ -931,7 +931,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2097420422}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1690902944
 AudioSource:
@@ -1083,7 +1083,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 300dabc0285e0b44bb617774f099206a, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 23d65696384735e44b7c0bd57dec91ff, type: 3}
   m_Color: {r: 0.6226415, g: 0.35537556, b: 0.35537556, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1101,11 +1101,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2097420420}
   m_LocalRotation: {x: -0.014447851, y: -0, z: -0, w: 0.99989563}
-  m_LocalPosition: {x: -27.82, y: -3.25, z: 0.02}
-  m_LocalScale: {x: 7.8947983, y: 7.69529, z: 1.2458336}
+  m_LocalPosition: {x: -27.95, y: -3.33, z: 0.02}
+  m_LocalScale: {x: 3.627709, y: 3.4580843, z: 1.1711708}
   m_Children:
-  - {fileID: 519420032}
   - {fileID: 1690902943}
+  - {fileID: 519420032}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -1.6560001, y: 0, z: 0}
@@ -1153,18 +1153,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.001502879, y: 0.013296649}
+  m_Offset: {x: 0.0029267818, y: 0.019942716}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.44}
+    oldSize: {x: 0.32, y: 0.9}
     newSize: {x: 0.15, y: 0.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19581346, y: 0.43448934}
+  m_Size: {x: 0.31985041, y: 0.8908428}
   m_EdgeRadius: 0
 --- !u!95 &2097420426
 Animator:
