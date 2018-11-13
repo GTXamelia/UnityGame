@@ -7,6 +7,17 @@ public class PlayerController : MonoBehaviour {
 	public float speed;
 	Animator anim;
 
+	public GameObject triggerLeft;
+	public GameObject triggerRight;
+
+	void Awake()
+	{
+		triggerLeft = GameObject.Find("LeftPlayerCollider");
+		triggerRight = GameObject.Find("RightPlayerCollider");
+
+		triggerLeft.SetActive(false);
+		triggerRight.SetActive(false);
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -29,10 +40,12 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
 		{
 			GetComponent<Animator>().Play("Punch_Right");
+			triggerRight.SetActive(true);
 		}
 		else if (Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
 		{
 			GetComponent<Animator>().Play("Punch_Left");
+			triggerLeft.SetActive(true);
 		}
 		else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
 		{
@@ -40,6 +53,9 @@ public class PlayerController : MonoBehaviour {
 			transform.eulerAngles = new Vector2(0, 0);
 
 			GetComponent<Animator>().Play("Player_Right");
+
+			triggerLeft.SetActive(false);
+			triggerRight.SetActive(false);
 		}
 		else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
 		{
@@ -47,10 +63,16 @@ public class PlayerController : MonoBehaviour {
 			transform.eulerAngles = new Vector2(0, 0);
 
 			GetComponent<Animator>().Play("Player_Left");
+
+			triggerLeft.SetActive(false);
+			triggerRight.SetActive(false);
 		}
 		else
 		{
 			GetComponent<Animator>().Play("Idle");
+
+			triggerLeft.SetActive(false);
+			triggerRight.SetActive(false);
 		}
 	}
 }

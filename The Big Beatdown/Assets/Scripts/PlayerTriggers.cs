@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class PlayerTriggers : MonoBehaviour {
 
-	bool activated;
+	public GameObject trigger;
 
 	void Awake()
 	{
+		Debug.Log("Awake");
 
+		trigger = GameObject.Find("LevelsBubble");
+
+		trigger.SetActive(false);
 	}
+
+
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
