@@ -13,18 +13,6 @@ public class PlayerTriggers : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		Debug.Log("Trigger1 collided with " + col.name + " " + this.activated);
-
-		if (this.activated == false)
-		{
-			Debug.Log("Spawn enemies");
-
-			this.activated = true;
-		}
-		else
-		{
-			Debug.Log("Already triggered :" + this.activated);
-		}
-
+		Debug.Log("Trigger1 collided with " + col.name);
 	}
 }
