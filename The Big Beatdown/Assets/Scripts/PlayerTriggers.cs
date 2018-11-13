@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trigger1 : MonoBehaviour {
+public class PlayerTriggers : MonoBehaviour {
 
 	bool activated;
 
