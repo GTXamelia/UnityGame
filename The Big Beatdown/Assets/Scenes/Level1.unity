@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1fe0f8ed8735ce48925387d22fd33e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
 --- !u!1 &252464286
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1fe0f8ed8735ce48925387d22fd33e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
 --- !u!1 &380015404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1050,7 @@ GameObject:
   - component: {fileID: 1514949750}
   - component: {fileID: 1514949748}
   - component: {fileID: 1514949747}
+  - component: {fileID: 1514949746}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1055,6 +1058,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1514949746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1514949745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b55484161f546c49a5baf91298bd6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  Player: {fileID: 2097420422}
 --- !u!95 &1514949747
 Animator:
   serializedVersion: 3
@@ -1171,8 +1187,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1514949745}
   m_LocalRotation: {x: -0.014447851, y: -0, z: -0, w: 0.99989563}
-  m_LocalPosition: {x: -15.05, y: -3.27, z: 0.02}
-  m_LocalScale: {x: 3.627709, y: 3.4580843, z: 1.1711708}
+  m_LocalPosition: {x: -15.4, y: -3.3, z: 0.02}
+  m_LocalScale: {x: 3.583088, y: 3.4155498, z: 1.1567655}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1317,7 +1333,7 @@ GameObject:
   - component: {fileID: 2097420427}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1397,6 +1413,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  triggerLeft: {fileID: 0}
+  triggerRight: {fileID: 0}
 --- !u!50 &2097420424
 Rigidbody2D:
   serializedVersion: 4
