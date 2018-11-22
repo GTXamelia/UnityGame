@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class PlayerTriggers : MonoBehaviour {
 
-	public GameObject trigger;
-
 	void Awake()
 	{
-		Debug.Log("Awake");
 
-		trigger = GameObject.Find("LevelsBubble");
-
-		trigger.SetActive(false);
 	}
 
 
