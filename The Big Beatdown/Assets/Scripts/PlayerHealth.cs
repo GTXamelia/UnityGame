@@ -11,13 +11,19 @@ public class PlayerHealth : MonoBehaviour
 	public Image damageImage;
 	public AudioClip deathClip;                                 
 	public float flashSpeed = 5f;                               
-	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     
+	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+
+	AudioSource playerAudio;
 
 	bool isDead;          
 	bool damaged;
 
 	void Awake()
 	{
+		playerAudio = GetComponent<AudioSource>();
+
+		playerAudio.clip = deathClip;
+
 		currentHealth = startingHealth;
 	}
 
@@ -27,6 +33,8 @@ public class PlayerHealth : MonoBehaviour
 		if (damaged)
 		{
 			damageImage.color = flashColour;
+
+			playerAudio.Play();
 		}
 		else
 		{
