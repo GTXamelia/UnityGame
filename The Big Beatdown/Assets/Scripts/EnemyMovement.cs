@@ -19,15 +19,9 @@ public class EnemyMovement : MonoBehaviour
 	{
 		Vector3 displacement = Player.position - transform.position;
 		displacement = displacement.normalized;
-		if (Vector2.Distance(Player.position, transform.position) > 2.0f)
-		{
+
 			transform.position += (displacement * speed * Time.deltaTime);
 
-		}
-		else
-		{
-			//call hit player method
-		}
 
 	}
 

@@ -280,7 +280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1fe0f8ed8735ce48925387d22fd33e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
 --- !u!1 &252464286
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1fe0f8ed8735ce48925387d22fd33e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
 --- !u!1 &319402679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1512,7 @@ GameObject:
   - component: {fileID: 1514949752}
   - component: {fileID: 1514949751}
   - component: {fileID: 1514949750}
+  - component: {fileID: 1514949749}
   - component: {fileID: 1514949748}
   - component: {fileID: 1514949747}
   - component: {fileID: 1514949746}
@@ -1567,7 +1566,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0029267818, y: 0.019942716}
+  m_Offset: {x: 0.022014245, y: 0.05600041}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1578,8 +1577,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.31985041, y: 0.8908428}
+  m_Size: {x: 0.49545345, y: 0.9629582}
   m_EdgeRadius: 0
+--- !u!114 &1514949749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1514949745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa6e9c85331e114881bf362bcef155b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 0.5
+  attackDamage: 10
 --- !u!50 &1514949750
 Rigidbody2D:
   serializedVersion: 4
@@ -1855,11 +1867,10 @@ GameObject:
   - component: {fileID: 2097420422}
   - component: {fileID: 2097420421}
   - component: {fileID: 2097420424}
+  - component: {fileID: 2097420427}
   - component: {fileID: 2097420423}
-  - component: {fileID: 2097420428}
   - component: {fileID: 2097420425}
   - component: {fileID: 2097420426}
-  - component: {fileID: 2097420427}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1942,8 +1953,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  triggerLeft: {fileID: 0}
-  triggerRight: {fileID: 0}
+  triggerLeft: {fileID: 281212324}
+  triggerRight: {fileID: 219381076}
 --- !u!50 &2097420424
 Rigidbody2D:
   serializedVersion: 4
@@ -2020,26 +2031,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 0
-  healthSlider: {fileID: 0}
-  damageImage: {fileID: 0}
-  deathClip: {fileID: 0}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &2097420428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2097420420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a91ad3e40e25e4a9799c657716df1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
   healthSlider: {fileID: 1374326901}
-  damageImage: {fileID: 0}
-  deathClip: {fileID: 0}
+  damageImage: {fileID: 319402681}
+  deathClip: {fileID: 8300000, guid: d8a10d9e74b71f34298cae971b60a879, type: 3}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
