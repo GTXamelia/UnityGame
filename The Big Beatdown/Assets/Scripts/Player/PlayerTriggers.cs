@@ -9,10 +9,10 @@ public class PlayerTriggers : MonoBehaviour {
 
 	}
 
-
-
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		Debug.Log("Trigger1 collided with " + col.name);
+		EnemyHealth enemyHealth = col.GetComponent<EnemyHealth>();
+		enemyHealth.TakeDamage(10);
+		//Debug.Log("Trigger1 collided with " + col.name);
 	}
 }
