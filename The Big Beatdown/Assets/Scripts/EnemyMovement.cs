@@ -19,10 +19,9 @@ public class EnemyMovement : MonoBehaviour
 	{
 		Vector3 displacement = Player.position - transform.position;
 		displacement = displacement.normalized;
-
+		if (Vector2.Distance(Player.position, transform.position) > 1.4f)
+		{
 			transform.position += (displacement * speed * Time.deltaTime);
-
-
+		}
 	}
-
 }
