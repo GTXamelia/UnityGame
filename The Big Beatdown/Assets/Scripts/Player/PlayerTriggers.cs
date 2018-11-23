@@ -13,6 +13,6 @@ public class PlayerTriggers : MonoBehaviour {
 	{
 		EnemyHealth enemyHealth = col.GetComponent<EnemyHealth>();
 		enemyHealth.TakeDamage(10);
-		//Debug.Log("Trigger1 collided with " + col.name);
+		Debug.Log("Damaged " + col.name);
 	}
 }

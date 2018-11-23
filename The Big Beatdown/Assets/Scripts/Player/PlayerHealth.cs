@@ -24,7 +24,10 @@ public class PlayerHealth : MonoBehaviour
 
 		playerAudio.clip = deathClip;
 
-		currentHealth = startingHealth;
+		healthSlider.value = startingHealth;
+		currentHealth = 25;
+		healthSlider.value = currentHealth;
+		;
 	}
 
 
@@ -51,6 +54,8 @@ public class PlayerHealth : MonoBehaviour
 		currentHealth -= amount;
 
 		healthSlider.value = currentHealth;
+
+		Debug.Log("Player hit for " + amount + " damage. Health = " + currentHealth);
 
 		if (currentHealth <= 0 && !isDead)
 		{

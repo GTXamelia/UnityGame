@@ -13,22 +13,22 @@ public class EnemyHealth : MonoBehaviour
 		currentHealth = startingHealth;
 	}
 
-	public void TakeDamage(int amount)
+	void Update()
 	{
-		if (isDead)
-			return;
-
-		currentHealth -= amount;
-
 		if (currentHealth <= 0)
 		{
 			Death();
 		}
 	}
 
+	public void TakeDamage(int amount)
+	{
+		currentHealth -= amount;
+	}
+
 	void Death()
 	{
 		isDead = true;
-		Destroy(gameObject, 2f);
+		Destroy(gameObject);
 	}
 }
