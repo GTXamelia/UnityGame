@@ -6,6 +6,9 @@ public class Trigger1 : MonoBehaviour {
 
 	bool activated;
 
+	public GameObject enemy;
+	public Transform[] spawnPoints;
+
 	void Awake()
 	{
 
@@ -18,6 +21,10 @@ public class Trigger1 : MonoBehaviour {
 		if (this.activated == false)
 		{
 			Debug.Log("Spawn enemies");
+
+			int spawnPointIndex = Random.Range(0, spawnPoints.Length);
+
+			var clone = Instantiate(enemy, new Vector3(9,0,0), transform.rotation);
 
 			this.activated = true;
 		}
