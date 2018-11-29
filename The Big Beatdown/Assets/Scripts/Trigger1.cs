@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trigger1 : MonoBehaviour {
+public class Trigger1 : MonoBehaviour
+{
 
 	bool activated;
 
@@ -20,10 +21,7 @@ public class Trigger1 : MonoBehaviour {
 
 		if (this.activated == false)
 		{
-			Debug.Log("Spawn enemies");
-
-			Instantiate(enemy, spawnPoints[0].position, transform.rotation);
-			Instantiate(enemy, spawnPoints[1].position, transform.rotation);
+			StartCoroutine(SpawnAsync());
 
 			this.activated = true;
 		}
@@ -31,6 +29,16 @@ public class Trigger1 : MonoBehaviour {
 		{
 			Debug.Log("Already triggered :" + this.activated);
 		}
+	}
 
+	IEnumerator SpawnAsync()
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			Instantiate(enemy, spawnPoints[0].position, transform.rotation);
+			Instantiate(enemy, spawnPoints[1].position, transform.rotation);
+
+			yield return new WaitForSeconds(5.0f);
+		}
 	}
 }

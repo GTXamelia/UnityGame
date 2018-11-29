@@ -19,8 +19,6 @@ public class EnemyAttack : MonoBehaviour
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
 		playerHealth = player.GetComponent<PlayerHealth>();
-
-		Debug.Log(player + " " + playerHealth);
 	}
 
 

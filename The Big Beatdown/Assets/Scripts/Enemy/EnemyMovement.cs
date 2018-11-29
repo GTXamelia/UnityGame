@@ -7,14 +7,13 @@ public class EnemyMovement : MonoBehaviour
 
 	public float speed;
 	public Transform Player;
+	Animator anim;
 
-	// Use this for initialization
 	void Start()
 	{
-
+		anim = GetComponent<Animator>();
 	}
-
-	// Update is called once per frame
+	
 	void Update()
 	{
 		Vector3 displacement = Player.position - transform.position;
