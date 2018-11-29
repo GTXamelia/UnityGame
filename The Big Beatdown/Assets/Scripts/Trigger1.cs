@@ -22,9 +22,8 @@ public class Trigger1 : MonoBehaviour {
 		{
 			Debug.Log("Spawn enemies");
 
-			int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-
-			var clone = Instantiate(enemy, spawnPoints[spawnPointIndex].position, transform.rotation);
+			Instantiate(enemy, spawnPoints[0].position, transform.rotation);
+			Instantiate(enemy, spawnPoints[1].position, transform.rotation);
 
 			this.activated = true;
 		}
