@@ -21,6 +21,17 @@ public class EnemyMovement : MonoBehaviour
 		if (Vector2.Distance(Player.position, transform.position) > 1.4f)
 		{
 			transform.position += (displacement * speed * Time.deltaTime);
+
+			if(displacement.x > 0)
+			{
+				GetComponent<Animator>().Play("Player_Right");
+			}
 		}
+		else
+		{
+			GetComponent<Animator>().Play("Idle");
+		}
+
+		Debug.Log(displacement.x);
 	}
 }
