@@ -38,9 +38,9 @@ public class Trigger1 : MonoBehaviour
 		for (int i = 0; i < 5; i++)
 		{
 			clone = Instantiate(enemy, spawnPoints[0].position, transform.rotation);
-			clone.tag = "Enemys";
+			clone.tag = "Enemies";
 			clone = Instantiate(enemy, spawnPoints[1].position, transform.rotation);
-			clone.tag = "Enemys";
+			clone.tag = "Enemies";
 
 
 			yield return new WaitForSeconds(5.0f);
