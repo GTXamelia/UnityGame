@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -19,14 +20,12 @@ public class PlayerController : MonoBehaviour {
 		triggerRight.SetActive(false);
 	}
 
-	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
 	}
 	
 	void Update()
 	{
-
 		Movement();
 		{
 			float move = Input.GetAxis("Horizontal");

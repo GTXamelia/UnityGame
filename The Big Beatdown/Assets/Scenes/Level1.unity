@@ -1146,7 +1146,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 931560886}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.94, y: 0.096, z: 0}
+  m_LocalPosition: {x: -5.53, y: 0.12, z: 0}
   m_LocalScale: {x: 0.61375904, y: 0.078200094, z: 1}
   m_Children: []
   m_Father: {fileID: 252464289}
@@ -1332,7 +1332,7 @@ CanvasGroup:
   m_GameObject: {fileID: 1128410831}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 0
+  m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &1128410833
@@ -1670,9 +1670,9 @@ GameObject:
   - component: {fileID: 1514949750}
   - component: {fileID: 1514949749}
   - component: {fileID: 1514949754}
+  - component: {fileID: 1514949746}
   - component: {fileID: 1514949748}
   - component: {fileID: 1514949747}
-  - component: {fileID: 1514949746}
   - component: {fileID: 1514949753}
   m_Layer: 0
   m_Name: Enemy

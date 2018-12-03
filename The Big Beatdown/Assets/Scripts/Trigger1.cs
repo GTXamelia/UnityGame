@@ -10,6 +10,8 @@ public class Trigger1 : MonoBehaviour
 	public GameObject enemy;
 	public Transform[] spawnPoints;
 
+	private GameObject clone;
+
 	void Awake()
 	{
 
@@ -35,8 +37,11 @@ public class Trigger1 : MonoBehaviour
 	{
 		for (int i = 0; i < 5; i++)
 		{
-			Instantiate(enemy, spawnPoints[0].position, transform.rotation);
-			Instantiate(enemy, spawnPoints[1].position, transform.rotation);
+			clone = Instantiate(enemy, spawnPoints[0].position, transform.rotation);
+			clone.tag = "Enemys";
+			clone = Instantiate(enemy, spawnPoints[1].position, transform.rotation);
+			clone.tag = "Enemys";
+
 
 			yield return new WaitForSeconds(5.0f);
 		}
