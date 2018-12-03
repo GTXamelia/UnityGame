@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour {
 	public float speed;
 	Animator anim;
 
+	public AudioClip hitClip;
+	AudioSource playerAudio;
+
 	public GameObject triggerLeft;
 	public GameObject triggerRight;
 
@@ -36,14 +39,20 @@ public class PlayerController : MonoBehaviour {
 
 	void Movement()
 	{
+		playerAudio = GetComponent<AudioSource>();
+
+		playerAudio.clip = hitClip;
+
 		if (Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
 		{
 			GetComponent<Animator>().Play("Punch_Right");
+			playerAudio.Play();
 			triggerRight.SetActive(true);
 		}
 		else if (Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
 		{
 			GetComponent<Animator>().Play("Punch_Left");
+			playerAudio.Play();
 			triggerLeft.SetActive(true);
 		}
 		else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))

@@ -20,14 +20,9 @@ public class PlayerHealth : MonoBehaviour
 
 	void Awake()
 	{
-		playerAudio = GetComponent<AudioSource>();
-
-		playerAudio.clip = deathClip;
-
 		healthSlider.value = startingHealth;
 		currentHealth = 25;
 		healthSlider.value = currentHealth;
-		;
 	}
 
 
@@ -35,6 +30,10 @@ public class PlayerHealth : MonoBehaviour
 	{
 		if (damaged)
 		{
+			playerAudio = GetComponent<AudioSource>();
+
+			playerAudio.clip = deathClip;
+
 			damageImage.color = flashColour;
 
 			playerAudio.Play();
