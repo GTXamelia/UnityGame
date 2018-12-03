@@ -26,12 +26,23 @@ public class EnemyMovement : MonoBehaviour
 			{
 				GetComponent<Animator>().Play("Player_Right");
 			}
+			else
+			{
+				GetComponent<Animator>().Play("Player_Left");
+			}
 		}
 		else
 		{
-			GetComponent<Animator>().Play("Idle");
-		}
+			Debug.Log(displacement.x);
 
-		Debug.Log(displacement.x);
+			if (displacement.x > 0)
+			{
+				GetComponent<Animator>().Play("Punch_Right");
+			}
+			else
+			{
+				GetComponent<Animator>().Play("Punch_Left");
+			}
+		}	
 	}
 }
