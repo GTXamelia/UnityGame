@@ -11,25 +11,38 @@ public class Trigger1 : MonoBehaviour
 	public Transform[] spawnPoints;
 
 	private GameObject clone;
+	private GameObject[] OBCount;
+
+	public GameObject ColliderLeft;
+	public GameObject ColliderRight;
 
 	void Awake()
 	{
+		OBCount = GameObject.FindGameObjectsWithTag("Enemies");
+	}
 
+	void Update()
+	{
+		if(OBCount.Length <= 0)
+		{
+			ColliderLeft.SetActive(true);
+			ColliderRight.SetActive(true);
+		}
+		else
+		{
+			ColliderLeft.SetActive(false);
+			ColliderRight.SetActive(false);
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		Debug.Log("Trigger1 collided with " + col.name + " " + this.activated);
 
 		if (this.activated == false)
 		{
 			StartCoroutine(SpawnAsync());
 
 			this.activated = true;
-		}
-		else
-		{
-			Debug.Log("Already triggered :" + this.activated);
 		}
 	}
 
@@ -41,7 +54,6 @@ public class Trigger1 : MonoBehaviour
 			clone.tag = "Enemies";
 			clone = Instantiate(enemy, spawnPoints[1].position, transform.rotation);
 			clone.tag = "Enemies";
-
 
 			yield return new WaitForSeconds(5.0f);
 		}
