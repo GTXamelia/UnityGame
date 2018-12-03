@@ -399,6 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c001e73784efca54899246a09d209b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Boss: {fileID: 0}
 --- !u!114 &527297515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,6 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c001e73784efca54899246a09d209b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Boss: {fileID: 0}
 --- !u!114 &1142555642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1414,6 +1416,7 @@ GameObject:
   - component: {fileID: 1299050084}
   - component: {fileID: 1299050083}
   - component: {fileID: 1299050082}
+  - component: {fileID: 1299050085}
   m_Layer: 5
   m_Name: 3. Quit
   m_TagString: Untagged
@@ -1478,7 +1481,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1299050083}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1299050085}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1299050083
@@ -1515,6 +1529,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1299050080}
   m_CullTransparentMesh: 0
+--- !u!114 &1299050085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1299050080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2d8137ee121064a9aa87d474be6541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1374240581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,6 +1590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c001e73784efca54899246a09d209b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Boss: {fileID: 0}
 --- !u!114 &1374240584
 MonoBehaviour:
   m_ObjectHideFlags: 0

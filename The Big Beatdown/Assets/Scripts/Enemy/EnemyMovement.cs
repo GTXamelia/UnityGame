@@ -7,11 +7,9 @@ public class EnemyMovement : MonoBehaviour
 
 	public float speed;
 	public Transform Player;
-	Animator anim;
 
 	void Start()
 	{
-		anim = GetComponent<Animator>();
 	}
 	
 	void Update()
