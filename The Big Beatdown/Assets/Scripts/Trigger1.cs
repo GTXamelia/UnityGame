@@ -23,15 +23,19 @@ public class Trigger1 : MonoBehaviour
 
 	void Update()
 	{
+		OBCount = GameObject.FindGameObjectsWithTag("Enemies");
+		Debug.Log(OBCount.Length);
 		if(OBCount.Length <= 0)
-		{
-			ColliderLeft.SetActive(true);
-			ColliderRight.SetActive(true);
-		}
-		else
 		{
 			ColliderLeft.SetActive(false);
 			ColliderRight.SetActive(false);
+			Debug.Log("Inactive");
+		}
+		else
+		{
+			ColliderLeft.SetActive(true);
+			ColliderRight.SetActive(true);
+			Debug.Log("Active");
 		}
 	}
 
