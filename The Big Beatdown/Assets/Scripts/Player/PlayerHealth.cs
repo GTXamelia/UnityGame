@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
 	public int totalHealth = 100;                            
-	public int currentHealth;                                   
+	public int currentHealth;
+	public int startingHealth;
 	public Slider healthSlider;                                 
 	public Image damageImage;
 	public AudioClip deathClip;                                 
@@ -21,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
 	void Awake()
 	{
 		healthSlider.value = totalHealth;
-		currentHealth = 25;
+		currentHealth = startingHealth;
 		healthSlider.value = currentHealth;
 
 		playerAudio = GetComponent<AudioSource>();

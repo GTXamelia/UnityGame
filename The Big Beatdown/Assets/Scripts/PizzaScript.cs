@@ -7,6 +7,8 @@ public class PizzaScript : MonoBehaviour {
 	public AudioClip eatClip;
 	public int health = 25;
 
+
+
 	AudioSource playerAudio;
 	GameObject player;
 	PlayerHealth playerHealth;
@@ -22,5 +24,7 @@ public class PizzaScript : MonoBehaviour {
 		playerHealth.ClipPlay(eatClip);
 
 		playerHealth.IncreaseHealth(health);
+
+		gameObject.SetActive(false);
 	}
 }
