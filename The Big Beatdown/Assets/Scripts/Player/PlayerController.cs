@@ -43,7 +43,6 @@ public class PlayerController : MonoBehaviour {
 			float move = Input.GetAxis("Horizontal");
 			anim.SetFloat("speed", move);
 		}
-
 	}
 
 	void Movement()
