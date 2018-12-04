@@ -45,6 +45,16 @@ public class PlayerHealth : MonoBehaviour
 		damaged = false;
 	}
 
+	public void ClipPlay(AudioClip clip)
+	{
+		playerAudio = GetComponent<AudioSource>();
+
+		playerAudio.clip = clip;
+
+		playerAudio.Play();
+	}
+
+
 
 	public void TakeDamage(int amount)
 	{
