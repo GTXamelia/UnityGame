@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour {
 			playerAudio.Play();
 			triggerLeft.SetActive(true);
 		}
-		else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+		else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || moveRight)
 		{
 			transform.Translate(Vector2.right * speed * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, 0);

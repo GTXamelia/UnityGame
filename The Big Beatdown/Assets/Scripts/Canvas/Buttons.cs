@@ -25,9 +25,14 @@ public class Buttons : MonoBehaviour {
 		playerMove.moveLeft = false;
 	}
 
-	public void Right()
+	public void RightDown()
 	{
+		playerMove.moveRight = true;
+	}
 
+	public void RightUp()
+	{
+		playerMove.moveRight = false;
 	}
 
 	public void Punch()
