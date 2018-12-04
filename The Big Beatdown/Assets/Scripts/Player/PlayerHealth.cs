@@ -23,6 +23,8 @@ public class PlayerHealth : MonoBehaviour
 		healthSlider.value = totalHealth;
 		currentHealth = 25;
 		healthSlider.value = currentHealth;
+
+		playerAudio = GetComponent<AudioSource>();
 	}
 
 
@@ -30,8 +32,6 @@ public class PlayerHealth : MonoBehaviour
 	{
 		if (damaged)
 		{
-			playerAudio = GetComponent<AudioSource>();
-
 			playerAudio.clip = deathClip;
 
 			damageImage.color = flashColour;
@@ -47,11 +47,13 @@ public class PlayerHealth : MonoBehaviour
 
 	public void ClipPlay(AudioClip clip)
 	{
-		playerAudio = GetComponent<AudioSource>();
-
 		playerAudio.clip = clip;
 
+		playerAudio.volume = 100;
+
 		playerAudio.Play();
+
+		Debug.Log(clip);
 	}
 
 

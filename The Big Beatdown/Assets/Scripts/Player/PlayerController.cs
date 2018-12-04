@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () {
 		anim = GetComponent<Animator>();
+
+		playerAudio = GetComponent<AudioSource>();
 	}
 	
 	void Update()
@@ -39,19 +41,17 @@ public class PlayerController : MonoBehaviour {
 
 	void Movement()
 	{
-		playerAudio = GetComponent<AudioSource>();
-
-		playerAudio.clip = hitClip;
-
 		if (Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
 		{
 			GetComponent<Animator>().Play("Punch_Right");
+			playerAudio.clip = hitClip;
 			playerAudio.Play();
 			triggerRight.SetActive(true);
 		}
 		else if (Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
 		{
 			GetComponent<Animator>().Play("Punch_Left");
+			playerAudio.clip = hitClip;
 			playerAudio.Play();
 			triggerLeft.SetActive(true);
 		}
