@@ -4,8 +4,34 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour {
 
-	public void Level1()
+	public bool left = false;
+
+	GameObject player;
+	PlayerController playerMove;
+
+	void Start()
 	{
-		Debug.Log("test");
+		player = GameObject.FindGameObjectWithTag("Player");
+		playerMove = player.GetComponent<PlayerController>();
+	}
+
+	public void LeftDown()
+	{
+		playerMove.moveLeft = true;
+	}
+
+	public void LeftUp()
+	{
+		playerMove.moveLeft = false;
+	}
+
+	public void Right()
+	{
+
+	}
+
+	public void Punch()
+	{
+
 	}
 }

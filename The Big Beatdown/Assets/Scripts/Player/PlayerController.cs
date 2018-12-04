@@ -8,6 +8,11 @@ public class PlayerController : MonoBehaviour {
 	public float speed;
 	Animator anim;
 
+	Buttons buttonUI;
+
+	public bool moveRight = false;
+	public bool moveLeft = false;
+
 	public AudioClip hitClip;
 	AudioSource playerAudio;
 
@@ -65,7 +70,7 @@ public class PlayerController : MonoBehaviour {
 			triggerLeft.SetActive(false);
 			triggerRight.SetActive(false);
 		}
-		else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+		else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || moveLeft)
 		{
 			transform.Translate(-Vector2.right * speed * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, 0);
@@ -82,5 +87,10 @@ public class PlayerController : MonoBehaviour {
 			triggerLeft.SetActive(false);
 			triggerRight.SetActive(false);
 		}
+	}
+
+	public void moveUI()
+	{
+
 	}
 }

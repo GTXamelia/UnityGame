@@ -2089,10 +2089,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 497365090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b4086843fa84b146bb9551942b521e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 192a6195912032444bbde5bbc3a7400f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 0}
 --- !u!114 &497365093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2133,7 +2132,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 497365092}
-        m_MethodName: LevelsMenu
+        m_MethodName: Right
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4927,14 +4926,14 @@ RectTransform:
   m_GameObject: {fileID: 1777165885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6732531, y: 1.88279, z: 1.4483}
+  m_LocalScale: {x: 0.6732531, y: 2.1887434, z: 1.4483}
   m_Children: []
   m_Father: {fileID: 1780719568}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 418, y: -238.3}
+  m_AnchoredPosition: {x: 417.2, y: -231.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777165887
@@ -4945,10 +4944,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1777165885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b4086843fa84b146bb9551942b521e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 192a6195912032444bbde5bbc3a7400f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 0}
 --- !u!114 &1777165888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4989,7 +4987,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1777165887}
-        m_MethodName: LevelsMenu
+        m_MethodName: Punch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5288,6 +5286,7 @@ GameObject:
   - component: {fileID: 1798809294}
   - component: {fileID: 1798809293}
   - component: {fileID: 1798809292}
+  - component: {fileID: 1798809296}
   m_Layer: 5
   m_Name: Left
   m_TagString: Untagged
@@ -5321,10 +5320,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1798809290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b4086843fa84b146bb9551942b521e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 192a6195912032444bbde5bbc3a7400f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 0}
 --- !u!114 &1798809293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5363,18 +5361,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1798809294}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1798809292}
-        m_MethodName: LevelsMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1798809294
@@ -5411,6 +5398,53 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1798809290}
   m_CullTransparentMesh: 0
+--- !u!114 &1798809296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1798809290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1798809292}
+          m_MethodName: LeftDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1798809292}
+          m_MethodName: LeftUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1857540750
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,6 +5884,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  moveRight: 0
+  moveLeft: 0
   hitClip: {fileID: 8300000, guid: ac2e5932f0c60f845a1ef7103ee25695, type: 3}
   triggerLeft: {fileID: 281212324}
   triggerRight: {fileID: 219381076}
