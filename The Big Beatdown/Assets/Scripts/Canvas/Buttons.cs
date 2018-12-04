@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour {
 
-	public bool left = false;
-
 	GameObject player;
 	PlayerController playerMove;
 
@@ -18,6 +16,7 @@ public class Buttons : MonoBehaviour {
 	public void LeftDown()
 	{
 		playerMove.moveLeft = true;
+		playerMove.lastPos = false;
 	}
 
 	public void LeftUp()
@@ -28,15 +27,22 @@ public class Buttons : MonoBehaviour {
 	public void RightDown()
 	{
 		playerMove.moveRight = true;
+		playerMove.lastPos = true;
 	}
 
 	public void RightUp()
 	{
+		playerMove.punch = false;
 		playerMove.moveRight = false;
 	}
 
-	public void Punch()
+	public void PunchDown()
 	{
+		playerMove.punch = true;
+	}
 
+	public void PunchUp()
+	{
+		playerMove.punch = false;
 	}
 }

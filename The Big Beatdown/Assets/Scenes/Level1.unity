@@ -2093,7 +2093,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192a6195912032444bbde5bbc3a7400f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: 0
 --- !u!114 &497365093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4949,6 +4948,7 @@ GameObject:
   - component: {fileID: 1777165889}
   - component: {fileID: 1777165888}
   - component: {fileID: 1777165887}
+  - component: {fileID: 1777165891}
   m_Layer: 5
   m_Name: Punch
   m_TagString: Untagged
@@ -4985,7 +4985,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192a6195912032444bbde5bbc3a7400f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: 0
 --- !u!114 &1777165888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5024,18 +5023,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1777165889}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1777165887}
-        m_MethodName: Punch
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1777165889
@@ -5072,6 +5060,53 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1777165885}
   m_CullTransparentMesh: 0
+--- !u!114 &1777165891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1777165885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1777165887}
+          m_MethodName: PunchDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1777165887}
+          m_MethodName: PunchUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1780719567
 GameObject:
   m_ObjectHideFlags: 0
@@ -5362,7 +5397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192a6195912032444bbde5bbc3a7400f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: 0
 --- !u!114 &1798809293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5926,6 +5960,8 @@ MonoBehaviour:
   speed: 15
   moveRight: 0
   moveLeft: 0
+  punch: 0
+  lastPos: 1
   hitClip: {fileID: 8300000, guid: ac2e5932f0c60f845a1ef7103ee25695, type: 3}
   triggerLeft: {fileID: 281212324}
   triggerRight: {fileID: 219381076}

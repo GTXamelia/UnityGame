@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
 
 	public bool moveRight = false;
 	public bool moveLeft = false;
+	public bool punch = false;
+	public bool lastPos = true;
 
 	public AudioClip hitClip;
 	AudioSource playerAudio;
@@ -46,14 +48,14 @@ public class PlayerController : MonoBehaviour {
 
 	void Movement()
 	{
-		if (Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+		if ((Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))) || punch == true && lastPos == true)
 		{
 			GetComponent<Animator>().Play("Punch_Right");
 			playerAudio.clip = hitClip;
 			playerAudio.Play();
 			triggerRight.SetActive(true);
 		}
-		else if (Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
+		else if ((Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))) || punch == true && lastPos == false)
 		{
 			GetComponent<Animator>().Play("Punch_Left");
 			playerAudio.clip = hitClip;
