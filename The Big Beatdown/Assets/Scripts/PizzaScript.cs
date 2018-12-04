@@ -5,19 +5,22 @@ using UnityEngine;
 public class PizzaScript : MonoBehaviour {
 
 	public AudioClip eatClip;
+	public int health = 25;
 
 	AudioSource playerAudio;
 	GameObject player;
-	PlayerHealth ClipPlay;
+	PlayerHealth playerHealth;
 
 	void Awake()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
-		ClipPlay = player.GetComponent<PlayerHealth>();
+		playerHealth = player.GetComponent<PlayerHealth>();
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		ClipPlay.ClipPlay(eatClip);
+		playerHealth.ClipPlay(eatClip);
+
+		playerHealth.IncreaseHealth(health);
 	}
 }
