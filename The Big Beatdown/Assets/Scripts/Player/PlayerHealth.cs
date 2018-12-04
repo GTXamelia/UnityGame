@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-	public int startingHealth = 100;                            
+	public int totalHealth = 100;                            
 	public int currentHealth;                                   
 	public Slider healthSlider;                                 
 	public Image damageImage;
@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
 
 	void Awake()
 	{
-		healthSlider.value = startingHealth;
+		healthSlider.value = totalHealth;
 		currentHealth = 25;
 		healthSlider.value = currentHealth;
 	}
@@ -54,11 +54,21 @@ public class PlayerHealth : MonoBehaviour
 
 		healthSlider.value = currentHealth;
 
-		Debug.Log("Player hit for " + amount + " damage. Health = " + currentHealth);
-
 		if (currentHealth <= 0 && !isDead)
 		{
 			Death();
+		}
+	}
+
+	public void IncreaseHealth(int amount)
+	{
+		currentHealth += amount;
+
+		healthSlider.value = currentHealth;
+
+		if (currentHealth >= totalHealth)
+		{
+			currentHealth = totalHealth;
 		}
 	}
 
