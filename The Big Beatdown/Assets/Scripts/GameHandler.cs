@@ -7,12 +7,13 @@ public class GameHandler : MonoBehaviour
 {
 	public GameObject Boss;
 	
-	void Update () {
-
+	
+	void Update ()
+	{
 		if (!Boss.active)
 		{
-			SceneManager.LoadScene("MainMenu");
-		}
-		
+
+			
+		}	
 	}
 }
