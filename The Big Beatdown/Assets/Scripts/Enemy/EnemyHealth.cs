@@ -2,11 +2,11 @@
 
 public class EnemyHealth : MonoBehaviour
 {
-	public int startingHealth = 10;
-	public int currentHealth;
+	private GameObject text;
+	private UIText uiText;
 
-	GameObject text;
-	UIText uiText;
+	public int startingHealth;
+	public int currentHealth;
 
 	void Awake()
 	{

@@ -3,23 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelsButton : MonoBehaviour {
-
+public class LevelsButton : MonoBehaviour
+{
 	public GameObject menu;
 
 	void Awake()
 	{
-		Debug.Log("Awake");
-
 		menu = GameObject.Find("LevelsBubble");
 
 		menu.SetActive(false);
-	}
-
-	void Start()
-	{
-
-		
 	}
 
 	public void LevelsMenu()
@@ -33,7 +25,4 @@ public class LevelsButton : MonoBehaviour {
 			menu.SetActive(true);
 		}
 	}
-
-	
-
 }

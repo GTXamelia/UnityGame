@@ -1,20 +1,32 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Buttons : MonoBehaviour {
-
-	GameObject player;
-	PlayerController playerMove;
+public class Buttons : MonoBehaviour
+{
+	private GameObject player;
+	private PlayerController playerMove;
 	private GameObject[] OBCount;
-	EnemyHealth enemyHealth;
-	public AudioClip specialClip;
-	PlayerHealth playerHealth;
+	private EnemyHealth enemyHealth;
+	private PlayerHealth playerHealth;
 
+	public AudioClip specialClip;
+	public Text specialLabel;
 	public int specialCount = 1;
 
 	void Start()
 	{
+		try
+		{
+			specialLabel.text = string.Format("X{0}", specialCount);
+		}
+		catch (Exception e)
+		{
+
+		}
+
 		player = GameObject.FindGameObjectWithTag("Player");
 		playerMove = player.GetComponent<PlayerController>();
 		playerHealth = player.GetComponent<PlayerHealth>();
@@ -68,6 +80,8 @@ public class Buttons : MonoBehaviour {
 			playerHealth.ClipPlay(specialClip);
 
 			specialCount--;
+
+			specialLabel.text = string.Format("X{0}", specialCount);
 		}
 	}
 }

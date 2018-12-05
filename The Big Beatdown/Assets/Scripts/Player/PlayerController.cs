@@ -3,21 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
+	private AudioSource playerAudio;
+	private Animator anim;
 
 	public float speed;
-	Animator anim;
-
-	Buttons buttonUI;
-
 	public bool moveRight = false;
 	public bool moveLeft = false;
 	public bool punch = false;
 	public bool lastPos = true;
-
 	public AudioClip hitClip;
-	AudioSource playerAudio;
-
 	public GameObject triggerLeft;
 	public GameObject triggerRight;
 
@@ -88,10 +84,5 @@ public class PlayerController : MonoBehaviour {
 			triggerLeft.SetActive(false);
 			triggerRight.SetActive(false);
 		}
-	}
-
-	public void moveUI()
-	{
-
 	}
 }

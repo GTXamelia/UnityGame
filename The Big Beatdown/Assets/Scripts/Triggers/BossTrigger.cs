@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossTrigger : MonoBehaviour {
-
+public class BossTrigger : MonoBehaviour
+{
 	public GameObject BossCollider;
 
 	void start()
@@ -15,5 +15,4 @@ public class BossTrigger : MonoBehaviour {
 	{
 		BossCollider.SetActive(false);
 	}
-
 }

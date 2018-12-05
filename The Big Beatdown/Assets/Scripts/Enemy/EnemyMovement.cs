@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-
 	public float speed;
 	public Transform Player;
-
-	void Start()
-	{
-	}
 	
 	void Update()
 	{
@@ -31,8 +26,6 @@ public class EnemyMovement : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log(displacement.x);
-
 			if (displacement.x > 0)
 			{
 				GetComponent<Animator>().Play("Punch_Right");

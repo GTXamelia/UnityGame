@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PizzaScript : MonoBehaviour {
-
+public class PizzaScript : MonoBehaviour
+{
 	public AudioClip eatClip;
 	public int health = 25;
 
-	AudioSource playerAudio;
-	GameObject player;
-	PlayerHealth playerHealth;
+	private AudioSource playerAudio;
+	private GameObject player;
+	private PlayerHealth playerHealth;
 
 	void Awake()
 	{

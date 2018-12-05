@@ -5,18 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-	public int totalHealth = 100;                            
-	public int currentHealth;                                  
+	public int currentHealth;
+	public int totalHealth = 100;                                                            
 	public Slider healthSlider;                                 
 	public Image damageImage;
 	public AudioClip deathClip;                                 
 	public float flashSpeed = 5f;                               
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
-	AudioSource playerAudio;
-
-	bool isDead;          
-	bool damaged;
+	private AudioSource playerAudio;
+	private bool isDead;
+	private bool damaged;
 
 	void Awake()
 	{
@@ -26,7 +25,6 @@ public class PlayerHealth : MonoBehaviour
 
 		playerAudio = GetComponent<AudioSource>();
 	}
-
 
 	void Update()
 	{
@@ -52,11 +50,7 @@ public class PlayerHealth : MonoBehaviour
 		playerAudio.volume = 100;
 
 		playerAudio.Play();
-
-		Debug.Log(clip);
 	}
-
-
 
 	public void TakeDamage(int amount)
 	{
@@ -84,11 +78,10 @@ public class PlayerHealth : MonoBehaviour
 		}
 	}
 
-
 	void Death()
 	{
 		isDead = true;
 
-		SceneManager.LoadScene("MainMenu");
+		SceneManager.LoadScene("Dead");
 	}
 }

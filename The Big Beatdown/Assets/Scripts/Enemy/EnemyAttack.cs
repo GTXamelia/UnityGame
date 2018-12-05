@@ -1,27 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
 public class EnemyAttack : MonoBehaviour
 {
-	public float timeBetweenAttacks = 0.5f;
-	public int attackDamage = 10;
+	private GameObject player;
+	private GameObject health;
+	private PlayerHealth playerHealth;
+	private EnemyHealth enemyHealth;
+	private bool playerInRange;
+	private float timer;
 
-	GameObject player;
-	GameObject health;
-	PlayerHealth playerHealth;
-	EnemyHealth enemyHealth;
-	bool playerInRange;
-	float timer;
-
+	public float timeBetweenAttacks;
+	public int attackDamage;
 
 	void Awake()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
 		playerHealth = player.GetComponent<PlayerHealth>();
 	}
-
-
 
 	void Update()
 	{
@@ -41,7 +37,6 @@ public class EnemyAttack : MonoBehaviour
 		}
 	}
 
-
 	void OnTriggerExit2D(Collider2D other)
 	{
 		if (other.gameObject == player)
@@ -50,14 +45,12 @@ public class EnemyAttack : MonoBehaviour
 		}
 	}
 
-
 	void Attack()
 	{
 		timer = 0f;
 
 		if (playerHealth.currentHealth > 0)
 		{
-			Debug.Log("Player hit");
 			playerHealth.TakeDamage(attackDamage);
 		}
 	}

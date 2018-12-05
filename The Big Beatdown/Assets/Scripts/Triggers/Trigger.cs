@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-
-	bool activated;
-
-	public GameObject enemy;
-	public Transform[] spawnPoints;
-
+	private bool activated;
 	private GameObject clone;
 	private GameObject[] OBCount;
 
+	public GameObject enemy;
+	public Transform[] spawnPoints;
 	public GameObject ColliderLeft;
 	public GameObject ColliderRight;
 

@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Settings : MonoBehaviour {
-
+public class Settings : MonoBehaviour
+{
 	public GameObject settings;
 
-	// Use this for initialization
 	void Awake()
 	{
-		Debug.Log("Awake");
-
 		settings = GameObject.Find("SettingsBubble");
-
 		settings.SetActive(false);
 	}
 
