@@ -32,6 +32,6 @@ public class UIText : MonoBehaviour {
 	{
 		scoreAmount += amount;
 
-		timerLabel.text = string.Format("{0}", scoreAmount);
+		scoreLabel.text = string.Format("Score:{0}", scoreAmount);
 	}
 }

@@ -4,12 +4,16 @@ public class EnemyHealth : MonoBehaviour
 {
 	public int startingHealth = 10;
 	public int currentHealth;
-	
-	bool isSinking;
+
+	GameObject text;
+	UIText uiText;
 
 	void Awake()
 	{
 		currentHealth = startingHealth;
+
+		text = GameObject.Find("Text");
+		uiText = text.GetComponent<UIText>();
 	}
 
 	void Update()
@@ -27,6 +31,8 @@ public class EnemyHealth : MonoBehaviour
 
 	void Death()
 	{
+		uiText.score(10);
+
 		Destroy(gameObject);
 	}
 }
