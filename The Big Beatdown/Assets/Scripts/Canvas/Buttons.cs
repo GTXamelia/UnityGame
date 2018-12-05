@@ -6,11 +6,18 @@ public class Buttons : MonoBehaviour {
 
 	GameObject player;
 	PlayerController playerMove;
+	private GameObject[] OBCount;
+	EnemyHealth enemyHealth;
+	public AudioClip eatClip;
+	PlayerHealth playerHealth;
+
+	public int specialCount = 0;
 
 	void Start()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
 		playerMove = player.GetComponent<PlayerController>();
+		playerHealth = player.GetComponent<PlayerHealth>();
 	}
 
 	public void LeftDown()
@@ -48,11 +55,14 @@ public class Buttons : MonoBehaviour {
 
 	public void SpecialDown()
 	{
-		Debug.Log("Test 1");
-	}
+		OBCount = GameObject.FindGameObjectsWithTag("Enemies");
 
-	public void SpecialUp()
-	{
-		Debug.Log("Test 2");
+		for (int i = 0; i < OBCount.Length; i++)
+		{
+			enemyHealth = OBCount[i].GetComponent<EnemyHealth>();
+			enemyHealth.TakeDamage(10);
+		}
+
+		playerHealth.ClipPlay(eatClip);
 	}
 }

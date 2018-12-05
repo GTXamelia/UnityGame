@@ -7,8 +7,6 @@ public class PizzaScript : MonoBehaviour {
 	public AudioClip eatClip;
 	public int health = 25;
 
-
-
 	AudioSource playerAudio;
 	GameObject player;
 	PlayerHealth playerHealth;
