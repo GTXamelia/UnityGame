@@ -8,10 +8,10 @@ public class Buttons : MonoBehaviour {
 	PlayerController playerMove;
 	private GameObject[] OBCount;
 	EnemyHealth enemyHealth;
-	public AudioClip eatClip;
+	public AudioClip specialClip;
 	PlayerHealth playerHealth;
 
-	public int specialCount = 0;
+	public int specialCount = 1;
 
 	void Start()
 	{
@@ -55,14 +55,19 @@ public class Buttons : MonoBehaviour {
 
 	public void SpecialDown()
 	{
-		OBCount = GameObject.FindGameObjectsWithTag("Enemies");
-
-		for (int i = 0; i < OBCount.Length; i++)
+		if (specialCount > 0)
 		{
-			enemyHealth = OBCount[i].GetComponent<EnemyHealth>();
-			enemyHealth.TakeDamage(10);
-		}
+			OBCount = GameObject.FindGameObjectsWithTag("Enemies");
 
-		playerHealth.ClipPlay(eatClip);
+			for (int i = 0; i < OBCount.Length; i++)
+			{
+				enemyHealth = OBCount[i].GetComponent<EnemyHealth>();
+				enemyHealth.TakeDamage(10);
+			}
+
+			playerHealth.ClipPlay(specialClip);
+
+			specialCount--;
+		}
 	}
 }
