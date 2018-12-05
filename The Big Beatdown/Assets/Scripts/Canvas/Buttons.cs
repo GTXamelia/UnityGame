@@ -45,4 +45,14 @@ public class Buttons : MonoBehaviour {
 	{
 		playerMove.punch = false;
 	}
+
+	public void SpecialDown()
+	{
+		Debug.Log("Test 1");
+	}
+
+	public void SpecialUp()
+	{
+		Debug.Log("Test 2");
+	}
 }
