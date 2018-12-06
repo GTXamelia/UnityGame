@@ -13,6 +13,7 @@
 * Custom UI
 * Touch controls
 
+# October
 ## Oct 11, 2018
 Start of project. Setup local and remote repo for project
 
@@ -34,4 +35,46 @@ Changed menu design to feature a bill board for the city aesthetic.
 Revamed player collision for future enemy collision.
 Added settings bubble to menu and have it popping out when you click settings.
 
-##  Nov 8, 2018
+## October Review
+A lot of ground work has been completed. The basics have been added with player movement a collision system and basic world objects.
+A solid foundation to build from. In the next weeks enenmies need to be added and a spawning system need to be put in place for enemies.
+
+# November
+## Nov 8, 2018
+Added trigger testing to enemies for player damage.
+Added player movement using arrow keys
+Added trigger for enemy spawning.
+Remade sprites for higher resolution.
+
+## Nov 9, 2018
+Created new sprite sheet for player that involves a new melee animation.
+Made enemy spawn a one time trigger.
+Level audio added and loops.
+
+## Nov 12, 2018
+Added player punching animations.
+Changed camera to be a child object of player.
+Edited audio levels of level music
+New animation system using scripts.
+
+## Nov 13, 2018
+Player trigger only activates when punchin. Trigger only activates when punching.
+Added basic enemy character.
+Testing trigger with other enemy object.
+Added a health system to player.
+
+## Nov 14, 2018
+Added enemy movement. Enemy now moves towards player from it's current posiiton.
+
+
+
+
+
+
+
+
+
+
+
+
+
