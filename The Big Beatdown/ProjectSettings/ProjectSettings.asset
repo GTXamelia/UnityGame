@@ -651,11 +651,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: Template_2D
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: com.gmit.mobile
+  metroCertificateIssuer: com.gmit.mobile
+  metroCertificateNotAfter: 00969f1eb9acd501
   metroApplicationDescription: Template_2D
   wsaImages: {}
   metroTileShortName: 
