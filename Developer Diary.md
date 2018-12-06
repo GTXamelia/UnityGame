@@ -1,7 +1,13 @@
 ![](https://imgur.com/93p55ur.png)
 
 [Developer](https://github.com/cian2009/UnityGame)  
-[Customer](https://github.com/Jomzi)  
+[Customer](https://github.com/Jomzi)
+# Video of the Game
+## Playtrough of Game:
+[![Level 1 -3 Playthrough](https://imgur.com/r0P7kZH.png)](https://www.youtube.com/watch?v=GbfCNNnI474&feature=youtu.be)
+
+## Death Example:
+[![Death](https://imgur.com/gT8OF2K.png)](https://www.youtube.com/watch?v=H3frAZ-YznA&feature=youtu.be)
 
 # Main features
 * Basic movement (Walking side to side)
