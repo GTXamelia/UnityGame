@@ -768,9 +768,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15fce5b3375efd3428ca67a3798dc50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreAmount: 0
   timerLabel: {fileID: 1793423976}
   scoreLabel: {fileID: 1991795027}
+  scoreAmount: 0
 --- !u!1 &219381076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,7 +1265,7 @@ GameObject:
   - component: {fileID: 297883850}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
