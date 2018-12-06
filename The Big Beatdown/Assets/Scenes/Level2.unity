@@ -1529,7 +1529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4014f58c0627ad042bb06830b63bf02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eatClip: {fileID: 8300000, guid: 2c91a216a2b62a249a1682f5fd54327e, type: 3}
+  eatClip: {fileID: 8300000, guid: 6157e9841d3e272418cd7caf4c7938d4, type: 3}
   health: 100
 --- !u!61 &305805444
 BoxCollider2D:
