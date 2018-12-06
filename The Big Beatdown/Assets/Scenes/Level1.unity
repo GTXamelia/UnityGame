@@ -6585,10 +6585,10 @@ MonoBehaviour:
   totalHealth: 100
   healthSlider: {fileID: 1374326901}
   damageImage: {fileID: 319402681}
-  deathClip: {fileID: 8300000, guid: d8a10d9e74b71f34298cae971b60a879, type: 3}
+  hitClip: {fileID: 8300000, guid: d8a10d9e74b71f34298cae971b60a879, type: 3}
+  deathClip: {fileID: 8300000, guid: cd92215d32d3f85418fb6c3868e62ebc, type: 3}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
-  hitClip: {fileID: 0}
 --- !u!82 &2097420428
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6598,8 +6598,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d8a10d9e74b71f34298cae971b60a879, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

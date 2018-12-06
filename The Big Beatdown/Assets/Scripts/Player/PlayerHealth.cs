@@ -9,12 +9,12 @@ public class PlayerHealth : MonoBehaviour
 	public int totalHealth = 100;                                                            
 	public Slider healthSlider;                                 
 	public Image damageImage;
-	public AudioClip deathClip;                                 
+	public AudioClip hitClip;
+	public AudioClip deathClip;
 	public float flashSpeed = 5f;                               
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
 	private AudioSource playerAudio;
-	public AudioClip hitClip;
 	private bool isDead;
 	private bool damaged;
 
@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
 	{
 		if (damaged)
 		{
-			playerAudio.clip = deathClip;
+			playerAudio.clip = hitClip;
 
 			damageImage.color = flashColour;
 
@@ -65,10 +65,6 @@ public class PlayerHealth : MonoBehaviour
 		{
 			Death();
 		}
-
-		playerAudio.clip = hitClip;
-
-		ClipPlay(hitClip);
 	}
 
 	public void IncreaseHealth(int amount)
@@ -86,6 +82,12 @@ public class PlayerHealth : MonoBehaviour
 	void Death()
 	{
 		isDead = true;
+
+		playerAudio.clip = deathClip;
+
+		playerAudio.volume = 100;
+
+		playerAudio.Play();
 
 		SceneManager.LoadScene("Dead");
 	}
