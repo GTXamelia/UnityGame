@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class DeathMenu : MonoBehaviour
 {
+	// If main menu button is clicked
 	public void MainMenu()
 	{
-		SceneManager.LoadScene("MainMenu");
+		SceneManager.LoadScene("MainMenu"); // Load main mneu scene
 	}
 
+	// If quit button is clicked
 	public void Quit()
 	{
-		Application.Quit();
+		Application.Quit(); // End application
 	}
 }

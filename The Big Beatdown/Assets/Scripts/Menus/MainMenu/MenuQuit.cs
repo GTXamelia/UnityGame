@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MenuQuit : MonoBehaviour
 {
+	// Funcion runs when quit button is clicked
 	public void Quit()
 	{
-		Application.Quit();
+		Application.Quit(); // End application
 	}
 }

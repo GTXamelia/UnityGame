@@ -5,24 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class LevelsButton : MonoBehaviour
 {
+	// Public variable
 	public GameObject menu;
 
+	// Ran once
 	void Awake()
 	{
-		menu = GameObject.Find("LevelsBubble");
+		menu = GameObject.Find("LevelsBubble"); // Find LevelsBubble object
 
-		menu.SetActive(false);
+		menu.SetActive(false); // Set pop-out to false
 	}
 
+	// Runs when levels button is clicked
 	public void LevelsMenu()
 	{
-		if (menu.active)
+		if (menu.active) // If pop-out is active
 		{
-			menu.SetActive(false);
+			menu.SetActive(false); // Change to inactive
 		}
-		else
+		else // Else pop-out is inactive 
 		{
-			menu.SetActive(true);
+			menu.SetActive(true); // Change pop-out to active
 		}
 	}
 }
