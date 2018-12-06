@@ -1,5 +1,6 @@
-![](https://imgur.com/93p55ur.png)
-[Github for Project](https://github.com/cian2009/UnityGame)    
+![](https://imgur.com/93p55ur.png)  
+
+[Github for Project](https://github.com/cian2009/UnityGame)   
 [Developer](https://github.com/cian2009/UnityGame)  
 [Customer](https://github.com/Jomzi)  
 # Video of the Game
