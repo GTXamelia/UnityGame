@@ -29,10 +29,11 @@ public class EndGame : MonoBehaviour
 
 			PlayerParams.health = playerHealth.currentHealth;
 			PlayerParams.score = uiText.scoreAmount;
-			//PlayerParams.special = uiButtons.specialCount;
+			PlayerParams.special = uiButtons.specialCount;
 
-			Debug.Log(special);
-			Debug.Log(special.GetComponent<UIButtons>());
+			Debug.Log("Level1: Health (" + PlayerParams.health + ")");
+			Debug.Log("Level1: Score (" + PlayerParams.score + ")");
+			Debug.Log("Level1: Special (" + PlayerParams.special + ")");
 
 			SceneManager.LoadScene("Level2");
 		}

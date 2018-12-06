@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
-	void Update ()
+	void Start ()
 	{
-		//Debug.Log(PlayerParams.health);
-		//Debug.Log(PlayerParams.score);
-		//Debug.Log(PlayerParams.special);
+		Debug.Log("Level2: Health (" + PlayerParams.health + ")");
+		Debug.Log("Level2: Score (" + PlayerParams.score + ")");
+		Debug.Log("Level2: Special (" + PlayerParams.special + ")");
 	}
 }
