@@ -91,38 +91,38 @@ A lot of work with enemies has been completed. Some things that need to get done
 * Added more sounds
 * More levels
 
-It might seem like a lot of work but all the hard work has been completed. Now I just need to bulk up current scripts to add the ability to increase health such as reverting the enemy damage script and adding it to a pizza png object.
-More levles involves finishing current challanges anf moveing them to the new level.
+It might seem like a lot of work but all the hard work has been completed. Now I just need to bulk up current scripts to add the ability to increase health such as reverting the enemy damage script and adding it to a pizza png object.  
+More levles involves finishing current challanges anf moveing them to the new level.  
 
-December I will add these features and bug test the game before submission.
+December I will add these features and bug test the game before submission.  
 
 # December
 ## Dec 3, 2018
-Tagged clonned enemies with different tag as the old way would cause issues with the player special ability later on.
-Changed player speed to make the game play a bit faster.
-Trigger now releases player when they have killed all enemeies in that section.
-Added sound for player punching.
-Testing second spawn point in level 1.
-Enemies now animate towards the player and punch in the direction of the player.
-Created boss enemy to level at end of the game.
-Added map switch on boss death (Later changed to a collider behind the boss for better transition between levels.)
-Added death menu scene to inform the user they failed. Giving them the option to exit the application or go back to the main menu.
-Lots of tyding up. (Moving assets, removing assets, renaming scripts....etc)
-Lots of bug fixed to do with new and old assets.
+Tagged clonned enemies with different tag as the old way would cause issues with the player special ability later on.  
+Changed player speed to make the game play a bit faster.  
+Trigger now releases player when they have killed all enemeies in that section.  
+Added sound for player punching.  
+Testing second spawn point in level 1.  
+Enemies now animate towards the player and punch in the direction of the player.  
+Created boss enemy to level at end of the game.  
+Added map switch on boss death (Later changed to a collider behind the boss for better transition between levels).  
+Added death menu scene to inform the user they failed. Giving them the option to exit the application or go back to the main menu.  
+Lots of tyding up (Moving assets, removing assets, renaming scripts....etc).  
+Lots of bug fixed to do with new and old assets.  
 
 ## Dec 4, 2018
-Small changes to enemies (Speed, health and collider)
-Added increase health function to player health script.
-Added pizza with sound effect and created sound effect function for audio souce. Pizza called function in player health when collided with to add health to player. The pizza is the nremoved from the scene when used up.
-Added touch controls to scene. (Moving left, right punch and special)
-Added program settings (Added picture, logo and icon to program)
+Small changes to enemies (Speed, health and collider).  
+Added increase health function to player health script.  
+Added pizza with sound effect and created sound effect function for audio souce. Pizza called function in player health when collided with to add health to player. The pizza is the nremoved from the scene when used up.  
+Added touch controls to scene (Moving left, right punch and special).  
+Added program settings (Added picture, logo and icon to program).  
 
 ## Dec 5, 2018
-Changed UI elements (Icons and position)
-Special functionality added. Special button can only be clicked once as you get one try per level. Counter is instantiated once each level.
-Added timer to UI. Counter that dislays minutes, seconds and miliseconds spent on the level.
-Added score system to UI. Each enemy adds 10 points to score.
-Added level 2 and transition working.
+Changed UI elements (Icons and position).  
+Special functionality added. Special button can only be clicked once as you get one try per level. Counter is instantiated once each level.  
+Added timer to UI. Counter that dislays minutes, seconds and miliseconds spent on the level.  
+Added score system to UI. Each enemy adds 10 points to score.  
+Added level 2 and transition working.  
 
 ## Dec 6, 2018
-Added static method for holding data between levels (Health, Score and specials remaining). All data is read by level 2 and 3 after each has been complete.
+Added static method for holding data between levels (Health, Score and specials remaining). All data is read by level 2 and 3 after each has been complete.  
