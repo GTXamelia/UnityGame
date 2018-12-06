@@ -138,7 +138,13 @@ In the last few days of work vefore submission in December I got the remianing w
 # Testing
 ![](http://softwaretestingfundamentals.com/wp-content/uploads/2010/12/unittesting.jpg)
 ## Unit Testing
-I tested each scene and every object I added to the scene during development to ensure quality was met while the project was in development. This involved not playing the game just yet but breaking every game object down and testing for bugs in anyway I thouhg one could accour. I tested the boundaries of every counter and every timer to see if an error would surface, and if one did I would work on fixing it before proceeding.
+I tested each scene and every object I added to the scene during development to ensure quality was met while the project was in development. This involved not playing the game just yet but breaking every game object down and testing for bugs in anyway I thouhg one could accour. I tested the boundaries of every counter and every timer to see if an error would surface, and if one did I would work on fixing it before proceeding.  
+
 ## Intergration Testing
+Once all the objects were tested indivdually the next step in testing had to be undertaken. I had to test the game objects interacting in the scene with one another and remove and bugs that may have appeared. Lots of small errors were found with this method when testing the game from level 1 - 3.  
 
 ## System  Testing
+I build an android app using the andoid SDK and tested the built APK file on my OnePlus 3T. It performed just like it did during development. There was an issue with the UI which was fixed in the next patch.
+
+## Acceptance Testing
+The project was handed off to James O’Hanlon for review. After which he was happy with the project and the progress which had been made.
