@@ -126,3 +126,13 @@ Added level 2 and transition working.
 
 ## Dec 6, 2018
 Added static method for holding data between levels (Health, Score and specials remaining). All data is read by level 2 and 3 after each has been complete.  
+Level 2 now gets previous scene data from static class. Data such as health, score and specials carry over to new levels.  
+Added end of game stats screen and scene to project. This scene is shown after the user finishes level 3. It shows them their score health remaining and specials remaining.  
+Commented every script.  
+Lots of bugs removed.
+Extensive testing of each scene to find bugs.
+
+## Decemeber Review
+In the last few days of work vefore submission in December I got the remianing work done which mainly involved copying function I already created and creating new scenes for the player. 
+
+
