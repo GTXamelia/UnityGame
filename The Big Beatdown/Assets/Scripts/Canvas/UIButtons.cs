@@ -82,8 +82,13 @@ public class UIButtons : MonoBehaviour
 			specialCount--;
 
 			specialLabel.text = string.Format("X{0}", specialCount);
-
-			PlayerParams.special = specialCount;
 		}
+	}
+
+	public void SpecialUp(int amount)
+	{
+		specialCount += amount;
+
+		specialLabel.text = string.Format("X{0}", specialCount);
 	}
 }
