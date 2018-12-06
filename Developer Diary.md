@@ -66,11 +66,37 @@ Added a health system to player.
 ## Nov 14, 2018
 Added enemy movement. Enemy now moves towards player from it's current posiiton.
 
+## Nov 22, 2018
+New health system added.
+Added system for enemies to damage player health.
+Player health system up and running. Takes damage from enemies.
 
+## Nov 23, 2018
+CHanged enemy speed to stop them running at the player too quickly.
+Tidied up files and removed assets that are no longer in use.
+Fixed bugs to do with player and the new health system.
+Changed player trigger sizes as they were a bit too large.
 
+## Nov 28, 2018
+Got enemy spawner working and cloning enemies into the area.
 
+## Nov 29, 2018
+Added a time delay to enemy spawner as all enemies spawned at once.
+Added second spawnpoint to make enemies come from left and right of screen.
 
+## Novemeber Review
+A lot of work with enemies has been completed. SOme things that need to get done ar
+* Bosses at end of level
+* Pizza health increase
+* Added more sounds
+* More levels
+It might seem like a lot of work but all the hard work has been completed. Now I just need to bulk up current scripts to add the ability to increase health such as reverting the enemy damage script and adding it to a pizza png object.
+More levles involves finishing current challanges anf moveing them to the new level.
 
+December I will add these features and bug test the game before submission.
+
+# December
+## Dec 3, 2018
 
 
 
