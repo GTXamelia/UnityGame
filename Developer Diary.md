@@ -1,6 +1,7 @@
 ![](https://imgur.com/93p55ur.png)
 
-[Github](https://github.com/cian2009/UnityGame)
+[Developer](https://github.com/cian2009/UnityGame)
+[Customer](https://github.com/Jomzi)
 
 # Main features
 * Basic movement (Walking side to side)
