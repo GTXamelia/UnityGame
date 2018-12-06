@@ -135,4 +135,10 @@ Extensive testing of each scene to find bugs.
 ## Decemeber Review
 In the last few days of work vefore submission in December I got the remianing work done which mainly involved copying function I already created and creating new scenes for the player. 
 
+# Testing
+![](http://softwaretestingfundamentals.com/wp-content/uploads/2010/12/unittesting.jpg)
+## Unit Testing
+I tested each scene and every object I added to the scene during development to ensure quality was met while the project was in development. This involved not playing the game just yet but breaking every game object down and testing for bugs in anyway I thouhg one could accour. I tested the boundaries of every counter and every timer to see if an error would surface, and if one did I would work on fixing it before proceeding.
+## Intergration Testing
 
+## System  Testing
