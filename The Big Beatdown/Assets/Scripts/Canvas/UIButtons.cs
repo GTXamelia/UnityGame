@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Buttons : MonoBehaviour
+public class UIButtons : MonoBehaviour
 {
 	private GameObject player;
 	private PlayerController playerMove;
@@ -82,6 +82,8 @@ public class Buttons : MonoBehaviour
 			specialCount--;
 
 			specialLabel.text = string.Format("X{0}", specialCount);
+
+			PlayerParams.special = specialCount;
 		}
 	}
 }

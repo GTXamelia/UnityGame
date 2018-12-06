@@ -4,7 +4,6 @@ using System.Collections;
 public class EnemyAttack : MonoBehaviour
 {
 	private GameObject player;
-	private GameObject health;
 	private PlayerHealth playerHealth;
 	private EnemyHealth enemyHealth;
 	private bool playerInRange;

@@ -5,15 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
-	public GameObject Boss;
-	
-	
 	void Update ()
 	{
-		if (!Boss.active)
-		{
-
-			
-		}	
+		//Debug.Log(PlayerParams.health);
+		//Debug.Log(PlayerParams.score);
+		//Debug.Log(PlayerParams.special);
 	}
 }

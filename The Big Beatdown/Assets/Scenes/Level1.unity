@@ -768,6 +768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15fce5b3375efd3428ca67a3798dc50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreAmount: 0
   timerLabel: {fileID: 1793423976}
   scoreLabel: {fileID: 1991795027}
 --- !u!1 &219381076
@@ -1576,7 +1577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b010e7cc2adade4684376a56322783d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
 --- !u!61 &317442199
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4584,7 +4584,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c001e73784efca54899246a09d209b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 297883849}
 --- !u!1 &1496022615
 GameObject:
   m_ObjectHideFlags: 0
@@ -6519,7 +6518,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2097420420}
   m_LocalRotation: {x: -0.014447851, y: -0, z: -0, w: 0.99989563}
-  m_LocalPosition: {x: 499.7, y: -3.33, z: 0.02}
+  m_LocalPosition: {x: 627.2, y: -3.33, z: 0.02}
   m_LocalScale: {x: 3.627709, y: 3.4580843, z: 1.1711708}
   m_Children:
   - {fileID: 1690902943}

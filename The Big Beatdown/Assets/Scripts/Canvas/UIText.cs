@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIText : MonoBehaviour
 {
 	private float time;
-	private int scoreAmount = 0;
+	public int scoreAmount = 0;
 
 	public Text timerLabel;
 	public Text scoreLabel;
