@@ -36,9 +36,9 @@ public class PlayerHealth : MonoBehaviour
 		{
 			playerAudio.clip = hitClip; // Set clip to hitClip
 
-			damageImage.color = flashColour; // Flash screen red
-
 			playerAudio.Play(); // Play clip
+
+			damageImage.color = flashColour; // Flash screen red	
 		}
 		else
 		{
@@ -65,6 +65,10 @@ public class PlayerHealth : MonoBehaviour
 		currentHealth -= amount; // Remove damge from health
 
 		healthSlider.value = currentHealth; // Adjust slider value
+
+		playerAudio.clip = hitClip;
+
+		playerAudio.Play(); // Play clip
 
 		if (currentHealth <= 0 && !isDead) // If player health is zero or below
 		{

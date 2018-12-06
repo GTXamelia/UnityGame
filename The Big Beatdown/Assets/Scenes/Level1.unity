@@ -768,9 +768,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15fce5b3375efd3428ca67a3798dc50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreAmount: 0
   timerLabel: {fileID: 1793423976}
   scoreLabel: {fileID: 1991795027}
+  scoreAmount: 0
 --- !u!1 &219381076
 GameObject:
   m_ObjectHideFlags: 0
@@ -6581,7 +6581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16a91ad3e40e25e4a9799c657716df1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  currentHealth: 25
   totalHealth: 100
   healthSlider: {fileID: 1374326901}
   damageImage: {fileID: 319402681}
