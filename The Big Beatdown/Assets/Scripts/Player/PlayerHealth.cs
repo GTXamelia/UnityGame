@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
 	private AudioSource playerAudio;
+	public AudioClip hitClip;
 	private bool isDead;
 	private bool damaged;
 
@@ -64,6 +65,10 @@ public class PlayerHealth : MonoBehaviour
 		{
 			Death();
 		}
+
+		playerAudio.clip = hitClip;
+
+		ClipPlay(hitClip);
 	}
 
 	public void IncreaseHealth(int amount)
