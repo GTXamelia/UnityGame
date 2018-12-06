@@ -31,7 +31,20 @@ public class EndGame : MonoBehaviour
 			PlayerParams.score = uiText.scoreAmount;
 			PlayerParams.special = uiButtons.specialCount;
 
-			SceneManager.LoadScene("Level3");
+			Scene scene = SceneManager.GetActiveScene();
+
+			if (scene.name == "Level1")
+			{
+				SceneManager.LoadScene("Level2");
+			}
+			else if (scene.name == "Level2")
+			{
+				SceneManager.LoadScene("Level3");
+			}
+			else
+			{
+				SceneManager.LoadScene("Done");
+			}
 		}
 	}
 }
